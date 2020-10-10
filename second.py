@@ -1,5 +1,5 @@
 from matplotlib import pyplot as plt; #exercise2
-path= input("please insert the text file's path: "); #the file path "C:\\Users\chysa\Desktop\example.txt"
+path= input("please insert the text file's path: "); #the file path
 f = open(path,"r"); #opens the file in read mode
 file = f.read(); #saves the text files context in the file variable
 letters = [char for char in file]; #divides text to an array of characters
