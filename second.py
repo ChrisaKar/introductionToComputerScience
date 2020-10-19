@@ -1,7 +1,14 @@
 from matplotlib import pyplot as plt; #exercise2
-path= input("please insert the text file's path: "); #the file path
-f = open(path,"r"); #opens the file in read mode
-file = f.read(); #saves the text files context in the file variable
+fileNotFound = False;
+while not fileNotFound:
+ try:
+  path= input("please insert the text file's path: "); #the file path
+  f = open(path,"r"); #opens the file in read mode
+  file = f.read(); #saves the text files context in the file variable
+  fileNotFound=True;
+ except:
+  print("File not found \n");
+  
 letters = [char for char in file]; #divides text to an array of characters
 final_letters =[]; #holds the letters
 letterCounter=[]; #holds how many times each character appeared
